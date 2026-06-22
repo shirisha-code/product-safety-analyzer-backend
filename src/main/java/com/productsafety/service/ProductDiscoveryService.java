@@ -309,6 +309,12 @@ public void generateMissingKnowledge(
 public ProductAnalysisResponse discoverAndAnalyze(
         String productName)
         throws Exception {
+                if (productName == null ||
+    productName.trim().length() < 5) {
+
+    throw new RuntimeException(
+            "Please enter a complete product name");
+}
 
     String response =
             discoverProductIngredients(
