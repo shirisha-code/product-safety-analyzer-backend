@@ -24,7 +24,12 @@ import com.productsafety.dto.FullProductAnalysisResponse;
 import java.util.stream.Collectors;
 import java.util.List;
 
-@CrossOrigin(origins = "http://localhost:5173")
+@CrossOrigin(
+    origins = {
+        "http://localhost:5173",
+        "https://product-safety-analyzer-frontend.vercel.app"
+    }
+)
 @RestController
 public class ProductController {
 
